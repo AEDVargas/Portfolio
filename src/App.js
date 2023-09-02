@@ -12,6 +12,9 @@ function App() {
       {/* <About/> */}
 
       <div className="content">
+        Message from my laptop
+        testing 123
+        
       </div>
     </div>
   );
