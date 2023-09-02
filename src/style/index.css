@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap');
 
+:root{
+  --neon_green: #00cc00;
+ }
+
 /* base styles */
 * {
   margin: 0;
   font-family: "Fira Code";
-  color: #00cc00;
+  color: var(--neon_green);
   height: 200px;
   caret-color: transparent;
 }
@@ -71,10 +75,17 @@ body {
   float: right;
   width: 300px;
   margin-right: 10%;
+  animation: dropIn 1s ease forwards;
+  animation-delay: calc(var(--order) * 100ms)
 }
 
-.icons a {
+.icons a{
   margin-right: 10%;
+}
+
+@keyframes dropIn {
+  from {transform: translateY(-500px);}
+  to{transform: translateY(0);}  
 }
 
 .icons *:hover{
@@ -112,4 +123,4 @@ body {
   width: 400px;
 }
 
-/* box-shadow: inset 0 0 0 2px white; */
+/* outline: 3px solid red */

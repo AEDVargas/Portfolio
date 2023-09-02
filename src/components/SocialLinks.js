@@ -8,14 +8,14 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Socials = () => {
     return (
-        <div className='icons'>
-            <a href='https://github.com/AEDVargas' target='__blank'>
-                <FontAwesomeIcon
-                    icon={faGithub}
-                    size='3x'
-                />
-            </a>
-            <a href='https://www.linkedin.com/in/edward-vargas-7889151a7/' target='__blank'>
+        <div className='icons' >
+                <a href='https://github.com/AEDVargas' target='__blank'>
+                    <FontAwesomeIcon
+                        icon={faGithub}
+                        size='3x'
+                    />
+                </a>
+            <a href='https://www.linkedin.com/in/edward-vargas-7889151a7/' target='__blank' >
                 <FontAwesomeIcon
                     icon={faLinkedin}
                     size='3x'
@@ -27,7 +27,7 @@ const Socials = () => {
                     size='3x'
                 />
             </a>
-            <a href='../resources/CV.pdf' target='__blank'>
+            <a href='../resources/CV.pdf' target='__blank' >
                 <FontAwesomeIcon
                     icon={faUser}
                     size='3x'
