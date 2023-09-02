@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap');
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Fira Code";
+  color: #00cc00;
+  height: 200px;
+}
+
+body {
+  background-color: #000d1a;
+}
+
+.header {
+  caret-color: transparent;
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 100px;
+  display: inline-block;
+}
+
+.header h1 {
+  color: #00cc00;
+}
+
+.header h1::after {
+  content: "";
+  width: 3px;
+  height: 100px;
+  background: #00cc00;
+  display: inline-block;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-duration: 1s;
+}
+
+@keyframes blinker { 
+  from { opacity: 1.0; } to { opacity: 0.0; }
+}
+
+.header h2{
+  font-size: 25%;
+  width: 500px;
+  margin-top: -30px;
+}
+
+.header *:hover{
+  color: #9966ff;
+}
+
+.icons{
+  opacity: 0.75;
+  display: flex;
+  float: right;
+  margin-top: 5%;
+  margin-right: 10%;
+}
+
+.icons a{
+  margin-right: 15%;
+
+}
+

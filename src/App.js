@@ -1,21 +1,16 @@
 import React, { Component } from "react";
-import Navbar from "./components/NavBar";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from "./Home";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Socials from "./components/SocialLinks";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
-          <Routes>
-            <Route path='/' element={<Home />}></Route>
-          </Routes>
-        </div>
-
+    <div className="App">
+      <Socials />
+      {/* <Header /> */}
+      <div className="content">
       </div>
-    </Router>
+    </div>
   );
 }
 
