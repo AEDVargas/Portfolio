@@ -1,8 +1,8 @@
-const About = () => {
+
+const AboutMeBio = () => {
     return (
-        <div className="about-me">
-            <h1>About Me</h1>
-            <h2>Developer and Cyber Security Enthusiast</h2>
+        <div className="about-me-bio">
+
                 <p> 
                     During my academic journey. I had the privilege of delving deep
                     into the worlds of cyber security and software development.
@@ -21,4 +21,5 @@ const About = () => {
         </div>
     );
 }
-export default About
+
+export default AboutMeBio

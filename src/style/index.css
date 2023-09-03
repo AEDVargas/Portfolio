@@ -2,6 +2,8 @@
 
 :root{
   --neon_green: #00cc00;
+  --purle: #9966ff;
+  --order: 0;
  }
 
 /* base styles */
@@ -17,24 +19,32 @@ body {
   background-color: #000d1a;
 }
 
-/* styles for Header.js and SocialLinks.js */
+.App  {
+  background-color: #000d1a;
+}
 
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+/* styles for Header.js and SocialLinks.js */
 .header {
   margin: 10%;
-  font-size: 100px;
-  width: 725px;
-  height: auto;
+  font-size: 30px;
+  background-color: aliceblue;
 }
 
 .header h1 {
-  color: #00cc00;
+  display: inline;
+  color: var(--neon_green);
 }
 
 .header h1::after {
   content: "";
   width: 3px;
-  height: 100px;
-  background: #00cc00;
+  height: 50px;
+  background: var(--neon_green);
   display: inline-block;
 
   /* Blinking text cursor animation */
@@ -55,72 +65,47 @@ body {
 }
 
 .header h2 {
-  font-size: 25%;
-  width: 50%;
-  height: auto;
-  position: absolute;
-  right: 500px;
+  font-size: 45%;
 }
 
 .header *:hover{
-  color: #9966ff;
+  color: var(--purle);
 }
 
 /* Social links icons */
 
-.icons {
-  position: sticky;
-  opacity: 0.5;
-  height: auto;
-  float: right;
-  width: 300px;
-  margin-right: 10%;
-  animation: dropIn 1s ease forwards;
-  animation-delay: calc(var(--order) * 100ms)
+.icons-container {
+  display: flex;
+  height: 50px;
+  margin-top: 50px;
+  justify-content: center;
+  overflow: hidden; /* Add overflow: hidden to prevent layout shifts */
 }
 
-.icons a{
-  margin-right: 10%;
+.icons {
+  animation: dropIn 1s ease forwards;
+  animation-delay: calc(var(--order) * 100ms);
+}
+
+.icons a {
+  margin: 100px;
+  text-decoration: none;
+  font-size: 30px;
+  transition: transform 0.2s ease; /* Add a smooth transition for the transform property */
 }
 
 @keyframes dropIn {
-  from {transform: translateY(-500px);}
-  to{transform: translateY(0);}  
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-.icons *:hover{
-  color: #9966ff;
-}
-
-/* styles for Header.js and SocialLinks.js */
-
-.about-me {
-  margin: 5%;
-  height: 30%;
-}
-
-.about-me *:hover{
-  color: #9966ff;
-}
-
-.about-me div {
-  padding: 1rem;
-}
-
-.about-me h1 {
-  height: 50px;
-  font-size: 50px;
-  height: 100%;
-  width: 240px;
-}
-
-.about-me h2 {
-  height: 50%;
-  width: 570px;
-}
-
-.about-me p {
-  width: 400px;
+.icons:hover {
+  transform: scale(5); /* Scale to 1.2 times the original size on hover */
+  transform: translate(42px, 18px);
 }
 
 /* outline: 3px solid red */
