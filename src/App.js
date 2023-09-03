@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import React, { Component } from "react";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import Socials from "./components/SocialLinks";
+import Navbar from "./components/NavBar";
 import About from "./components/AboutMe/AboutMe";
 import AnimatedCursor from 'react-animated-cursor';
 
@@ -26,27 +26,11 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <AnimatedCursor
-            innerSize={8}
-            color='0, 207, 0'
-            />
-      <div
-        className="gradient"
-        style={{
-          position: 'fixed', // Ensure that the gradient doesn't block the content
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          pointerEvents: 'none', // Allow interactions with content beneath the gradient
-          background: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, 
-            rgba(0, 207, 0, 0.25), transparent 10%)`,
-        }}
-      ></div>
-      <Socials />
-      <Header />
-      <About />
+    <div id="section1" className="main-parent">
+      <div className="main-child">
+        <Header />
+      </div>
+        <About />
     </div>
   );
 }

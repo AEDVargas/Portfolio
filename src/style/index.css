@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap');
 
 :root{
+  --background_colour: #000d1a;
   --neon_green: #00cc00;
   --purle: #9966ff;
   --order: 0;
@@ -16,28 +17,34 @@
 }
 
 body {
-  background-color: #000d1a;
-}
-
-.App  {
-  background-color: #000d1a;
+  background-color: white;
 }
 
 ::-webkit-scrollbar{
   display: none;
 }
 
+.header-parent{
 
-/* styles for Header.js and SocialLinks.js */
-.header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background_colour);
+  text-align: center;
+}
+
+/* styles for Header.js and Navbar.js */
+.header{
+
+  font-size: 25px;
   margin: 10%;
-  font-size: 30px;
-  background-color: aliceblue;
+  height: auto;
 }
 
 .header h1 {
   display: inline;
   color: var(--neon_green);
+
 }
 
 .header h1::after {
@@ -45,13 +52,22 @@ body {
   width: 3px;
   height: 50px;
   background: var(--neon_green);
+
+}
+
+.header h2 {
+  font-size: 75%;
+}
+
+.header h1::after {
+  content: "";
+  width: 3px;
+  height: 45px;
+  background: var(--neon_green);
   display: inline-block;
 
   /* Blinking text cursor animation */
-  animation-name: blinker;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(1, 0, 0, 1);
-  animation-duration: 1s;
+  animation: blinker 1s infinite cubic-bezier(1, 0, 0, 1);
 }
 
 @keyframes blinker {
@@ -64,34 +80,33 @@ body {
   }
 }
 
-.header h2 {
-  font-size: 45%;
+/* Navbar.css */
+.navbar {
+
+  padding: 10px 0; /* Padding for the navbar */
 }
 
-.header *:hover{
-  color: var(--purle);
-}
+.nav-list {
 
-/* Social links icons */
-
-.icons-container {
+  list-style-type: none;
+  padding: 0;
   display: flex;
-  height: 50px;
-  margin-top: 50px;
   justify-content: center;
-  overflow: hidden; /* Add overflow: hidden to prevent layout shifts */
-}
-
-.icons {
+  margin-top: 300px;
   animation: dropIn 1s ease forwards;
   animation-delay: calc(var(--order) * 100ms);
 }
 
-.icons a {
-  margin: 100px;
+.nav-item {
+  margin: 0 10px;
+  filter: drop-shadow(3px 5px 1px rgb(0 0 0 / 1));
+}
+
+.nav-link {
   text-decoration: none;
-  font-size: 30px;
-  transition: transform 0.2s ease; /* Add a smooth transition for the transform property */
+  color: var(--neon_green); /* Menu item text color */
+  font-size: 50px;
+  transition: font-size 0.3s ease; /* Smooth transition for the font-size property */
 }
 
 @keyframes dropIn {
@@ -101,11 +116,10 @@ body {
   to {
     transform: translateY(0);
   }
+
 }
 
-.icons:hover {
-  transform: scale(5); /* Scale to 1.2 times the original size on hover */
-  transform: translate(42px, 18px);
+/* Pop-out text-size effect */
+.nav-link:hover {
+  font-size: 100px; /* Adjust the desired font size when hovered */
 }
-
-/* outline: 3px solid red */

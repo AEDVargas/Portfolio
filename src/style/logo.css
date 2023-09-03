@@ -1,0 +1,20 @@
+.logo-container {
+    width: 310px;
+    height: 300px;
+    margin: 200px auto;
+    background-color: rgb(4, 255, 0);
+    position: absolute;
+
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 1s;
+    background-color: rgb(21, 0, 255);
+}
+
+.logo-b {}
