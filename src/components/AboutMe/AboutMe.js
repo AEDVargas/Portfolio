@@ -5,11 +5,13 @@ import './AboutMe.css';
 
 function AboutMe() {
     return (
-        <div className="about-me">
-            <h1>About Me</h1>
-            <h2>Developer and Cyber Security Enthusiast</h2>
-            <AboutMeBio />
-            <AboutMeSkills />
+        <div className="about-me-parent">
+            <div class="about-me-child">
+                <h1>About Me</h1>
+                <h2>Developer and Cyber Security Enthusiast</h2>
+                <AboutMeBio />
+                <AboutMeSkills />
+            </div>
         </div>
     );
 }

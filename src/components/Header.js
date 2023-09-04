@@ -7,7 +7,7 @@ function Header() {
     <div className='header-parent'>
       <Logo/>
       <Navbar />
-      <div className='header'>
+      <div className='header-child'>
         <div className='typing-demo'>
           <h1>Hello!, I'm Edward</h1>
           <h2>

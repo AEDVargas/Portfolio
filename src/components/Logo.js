@@ -2,11 +2,14 @@ import '../style/logo.css';
 
 const Logo = () => {
     return (
-        <div className='logo-container'>
-            <div className='logo logo1'></div>
-            <div className='logo logo2'></div>
-            <div className='logo logo3'></div>
-            <div className='logo logo4'></div>
+        <div className='logo-parent'>
+            <div className='logo-child'>
+                <div className='logo-back'>
+                </div>
+                <div className='logo-text'>
+                    AEVARGAS
+                </div>
+            </div>
         </div>
     );
 }

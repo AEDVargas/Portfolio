@@ -17,89 +17,87 @@
 }
 
 body {
-  background-color: white;
 }
+
+
 
 ::-webkit-scrollbar{
   display: none;
 }
 
-.header-parent{
-
-  position: absolute;
+.main-parent{
   width: 100%;
-  height: 100%;
+  height: 5000px;
+}
+
+.main-child{
+  width: 100%;
+  height: 20%;
   background-color: var(--background_colour);
   text-align: center;
 }
 
+.header-parent{
+
+}
+
+.limit {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(0, 39, 6);
+  text-align: center;
+}
+
 /* styles for Header.js and Navbar.js */
-.header{
+.header-child{
 
   font-size: 25px;
   margin: 10%;
   height: auto;
 }
 
-.header h1 {
-  display: inline;
-  color: var(--neon_green);
-
+.header-child h1 {
+  height: auto;
+  text-shadow: 5px 5px 10px black;
+  animation: dropUp 1s ease forwards;
 }
 
-.header h1::after {
-  content: "";
-  width: 3px;
-  height: 50px;
-  background: var(--neon_green);
-
+@keyframes dropUp {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.header h2 {
+.header-child h2 {
   font-size: 75%;
-}
-
-.header h1::after {
-  content: "";
-  width: 3px;
-  height: 45px;
-  background: var(--neon_green);
-  display: inline-block;
-
-  /* Blinking text cursor animation */
-  animation: blinker 1s infinite cubic-bezier(1, 0, 0, 1);
-}
-
-@keyframes blinker {
-  from {
-    opacity: 1.0;
-  }
-
-  to {
-    opacity: 0.0;
-  }
+  animation: dropUp 1s ease forwards;
 }
 
 /* Navbar.css */
 .navbar {
-
   padding: 10px 0; /* Padding for the navbar */
 }
 
 .nav-list {
-
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: center;
   margin-top: 300px;
-  animation: dropIn 1s ease forwards;
-  animation-delay: calc(var(--order) * 100ms);
+
 }
 
 .nav-item {
+  opacity: 0;
   margin: 0 10px;
   filter: drop-shadow(3px 5px 1px rgb(0 0 0 / 1));
+  animation: dropIn 1s ease forwards;
+  animation-delay: calc(var(--order) * 100ms);
 }
 
 .nav-link {
@@ -110,10 +108,12 @@ body {
 }
 
 @keyframes dropIn {
-  from {
-    transform: translateY(-500px);
+  0%{
+    opacity: 0;
+    transform: translateY(-150px);
   }
-  to {
+  100%{
+    opacity: 1;
     transform: translateY(0);
   }
 
@@ -122,4 +122,5 @@ body {
 /* Pop-out text-size effect */
 .nav-link:hover {
   font-size: 100px; /* Adjust the desired font size when hovered */
+  filter: drop-shadow(0px 0px 7px rgb(0 255 0 / 1));
 }

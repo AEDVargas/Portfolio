@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 import React, { Component } from "react";
 import Header from "./components/Header";
-import Home from "./pages/Home";
 import Navbar from "./components/NavBar";
 import About from "./components/AboutMe/AboutMe";
+import Logo from "./components/Logo";
 import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
@@ -26,11 +26,17 @@ function App() {
   }, [])
 
   return (
-    <div id="section1" className="main-parent">
+    <div className="main-parent">
+      <head>
+      <Navbar />
+      </head>
       <div className="main-child">
-        <Header />
+      <Header />
+
       </div>
+      <div className="limit">
         <About />
+      </div>
     </div>
   );
 }
