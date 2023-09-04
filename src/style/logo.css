@@ -21,7 +21,6 @@
 
 .logo-back:hover{
     padding-left: 20%;
-    animation: fade 1s;
 }
 
 @keyframes fade {
