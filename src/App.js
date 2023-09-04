@@ -27,12 +27,8 @@ function App() {
 
   return (
     <div className="main-parent">
-      <head>
-      <Navbar />
-      </head>
       <div className="main-child">
       <Header />
-
       </div>
       <div className="limit">
         <About />
