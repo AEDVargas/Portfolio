@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 
 import React, { Component } from "react";
 import Header from "./components/Header";
-import Navbar from "./components/NavBar";
 import About from "./components/AboutMe/AboutMe";
-import Logo from "./components/Logo";
-import AnimatedCursor from 'react-animated-cursor';
+import './style.css';
+
 
 function App() {
   const [mousePos, setMousePos] = useState({});
@@ -26,15 +25,20 @@ function App() {
   }, [])
 
   return (
-    <div className="main-parent">
-      <div className="main-child">
-      <Header />
-      </div>
-      <div className="limit">
-        <About />
-      </div>
+    <div className="main">
     </div>
   );
 }
 
 export default App;
+
+
+
+{/* <div className="main-parent">
+<div className="main-child">
+<Header />
+</div>
+<div className="limit">
+  <About />
+</div>
+</div> */}

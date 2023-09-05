@@ -1,0 +1,21 @@
+:root{
+
+}
+
+html, body{
+    background-color: black;
+}
+
+
+
+
+
+.main{
+    margin: 10%;
+    background-color: aliceblue;
+}
+
+.app{
+    margin: 10%;
+    background-color: aqua;
+}
